@@ -1,3 +1,5 @@
+import org.json.JSONObject;
+
 public class Prisoner {
 
     private String name, crime;
@@ -21,6 +23,15 @@ public class Prisoner {
         this.sentence = sentence;
         this.solitary = solitary;
         this.cell = cell;
+    }
+
+    public Prisoner(JSONObject jsonObject){
+        this.name = jsonObject.getString("name");
+        this.crime = jsonObject.getString("crime");
+        this.age = jsonObject.getInt("age");
+        this.sentence = jsonObject.getInt("sentenced_for");
+        this.solitary = jsonObject.getBoolean("solitary");
+        this.cell = new Cell();
     }
 
     /**

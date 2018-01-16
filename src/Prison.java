@@ -1,3 +1,9 @@
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class Prison {
@@ -11,6 +17,22 @@ public class Prison {
      */
     public Prison(String nameOfPrison) {
         this.nameOfPrison = nameOfPrison;
+    }
+
+
+
+    protected void load_prisoners(String filename){
+        try {
+            String jsonString = new String(Files.readAllBytes(Paths.get(filename)));
+            JSONArray jsonArray = new JSONArray(jsonString);
+            for(int i=0; i<jsonArray.length();i++){
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                Prisoner prisoner = new Prisoner(jsonObject);
+                prisoners.add(prisoner);
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     /**

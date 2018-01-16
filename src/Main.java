@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Main {
     public void run() {
         Prison school = new Prison("school");
+        /*
         school.addPrisoner("Jack the ripper", "Murder", 38, 40, true);
         school.addPrisoner("Casa Nova", "Stealing a heart", 21, 5, false);
         school.addPrisoner("Neptunis", "killing the dead sea", 53, 80, true);
@@ -13,7 +14,8 @@ public class Main {
         school.addPrisoner("Steve jobs", "Passing away before iphoneX release", 58, 5, false);
         school.addPrisoner("Harry Potter", "Killing voldermord", 18, 3, true);
         school.addPrisoner("Demo Dog", "attempted to kill Eleven", 2, 2, true);
-
+        */
+        school.load_prisoners("prisoners.json" );
         ArrayList<Prisoner> all = school.printAllPrisoner();
         System.out.println("all");
         printarray(all);
