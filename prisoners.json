@@ -1,0 +1,72 @@
+[
+  {
+    "sentenced_for": 40,
+    "name": "Jack the Ripper",
+    "solitary": true,
+    "crime": "Murder",
+    "age": 38
+  },
+  {
+    "sentenced_for": 5,
+    "name": "Casa Nova",
+    "solitary": false,
+    "crime": "Stealing a heart",
+    "age": 21
+  },
+  {
+    "sentenced_for": 80,
+    "name": "Neptunus",
+    "solitary": true,
+    "crime": "Killing the dead sea",
+    "age": 53
+  },
+  {
+    "sentenced_for": 3,
+    "name": "Lazy Student",
+    "solitary": false,
+    "crime": "Killing the time",
+    "age": 18
+  },
+  {
+    "sentenced_for": 7,
+    "name": "Justin Bieber",
+    "solitary": true,
+    "crime": "Singing",
+    "age": 16
+  },
+  {
+    "sentenced_for": 5,
+    "name": "Lazy Lecturer",
+    "solitary": false,
+    "crime": "Doing nothing",
+    "age": 34
+  },
+  {
+    "sentenced_for": 10,
+    "name": "Bill Clinton",
+    "solitary": false,
+    "crime": "Did not have sex with that woman",
+    "age": 66
+  },
+  {
+    "sentenced_for": 5,
+    "name": "Steve Jobs",
+    "solitary": false,
+    "crime": "Passing away before the iPhone X release",
+    "age": 58
+  },
+  {
+    "sentenced_for": 3,
+    "name": "Harry Potter",
+    "solitary": true,
+    "crime": "Killing Voldemort",
+    "age": 18
+  },
+  {
+    "sentenced_for": 2,
+    "name": "Demo dog",
+    "solitary": true,
+    "crime": "Attempted to kill Eleven",
+    "age": 2
+  }
+]
