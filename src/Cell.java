@@ -7,7 +7,7 @@ public class Cell {
         cellNumberCount++;
         cellNumber = cellNumberCount;
     }
-
+    
     public int getCellNumber() {
         return cellNumber;
     }

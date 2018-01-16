@@ -20,7 +20,10 @@ public class Prison {
     }
 
 
-
+    /**
+     * loads the prisoners from json file
+     * @param filename the file name of the prisoners
+     */
     protected void load_prisoners(String filename){
         try {
             String jsonString = new String(Files.readAllBytes(Paths.get(filename)));
@@ -35,6 +38,10 @@ public class Prison {
         }
     }
 
+    /**
+     * saves the prisoners to json file
+     * @param filename file to safe to
+     */
     protected void save_prisoners(String filename){
         JSONArray jsonArray = new JSONArray();
         for (Prisoner p: prisoners) {
@@ -150,6 +157,11 @@ public class Prison {
         return temp;
     }
 
+    /**
+     * removes a prisoner from the system
+     * @param name the name of the pisoner
+     * @return if the prisoner was removed
+     */
     public boolean remove_prisoner(String name){
         for (int i = 0; i < prisoners.size();i++){
             Prisoner p = prisoners.get(i);
