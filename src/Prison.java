@@ -35,6 +35,19 @@ public class Prison {
         }
     }
 
+    protected void save_prisoners(String filename){
+        JSONArray jsonArray = new JSONArray();
+        for (Prisoner p: prisoners) {
+            jsonArray.put(p.toJSONObject());
+        }
+        try {
+            String jsonString = jsonArray.toString(2);
+            Files.write(Paths.get(filename),jsonString.getBytes());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
     /**
      * adds prisoner to the list
      *
@@ -135,6 +148,18 @@ public class Prison {
             }
         }
         return temp;
+    }
+
+    public boolean remove_prisoner(String name){
+        for (int i = 0; i < prisoners.size();i++){
+            Prisoner p = prisoners.get(i);
+            if(p.getName().equals(name)){
+                prisoners.remove(i);
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /**

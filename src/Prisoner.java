@@ -25,6 +25,10 @@ public class Prisoner {
         this.cell = cell;
     }
 
+    /**
+     * this method creats a prisoner from the json-object given to it
+     * @param jsonObject the object to convert
+     */
     public Prisoner(JSONObject jsonObject){
         this.name = jsonObject.getString("name");
         this.crime = jsonObject.getString("crime");
@@ -33,6 +37,22 @@ public class Prisoner {
         this.solitary = jsonObject.getBoolean("solitary");
         this.cell = new Cell();
     }
+
+    /**
+     * this method creates a json-object from a prisoner.
+     * @return the prisoner as json-object
+     */
+    protected JSONObject toJSONObject(){
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("name",name);
+        jsonObject.put("crime",crime);
+        jsonObject.put("age",age);
+        jsonObject.put("sentenced_for",sentence);
+        jsonObject.put("solitary",solitary);
+
+        return jsonObject;
+    }
+
 
     /**
      * retuns name
